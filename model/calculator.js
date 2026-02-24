@@ -20,7 +20,7 @@ const verifyData = function(number){
 const calculate = function(number1, number2, operation){
     let value1 = Number(number1)
     let value2 = Number(number2)
-    let operationType = String(operation.toUppercase)
+    let operationType = operation.toUpperCase()
 
     if (operationType == 'SUM' || operationType == 'SOMAR'){
         result = value1 + value2
@@ -38,7 +38,7 @@ const calculate = function(number1, number2, operation){
         return false
     }
 
-    return result
+    return Number(result.toFixed(1))
 }
 
 module.exports = {
