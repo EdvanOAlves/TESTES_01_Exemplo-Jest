@@ -22,16 +22,16 @@ const calculate = function(number1, number2, operation){
     let value2 = Number(number2)
     let operationType = String(operation.toUppercase)
 
-    if (operationType == 'SUM' || 'SOMAR'){
+    if (operationType == 'SUM' || operationType == 'SOMAR'){
         result = value1 + value2
     }
-    else if (operationType == 'SUBTRACT' || 'SUBTRAIR'){
+    else if (operationType == 'SUBTRACT' || operationType == 'SUBTRAIR'){
         result = value1-value2
     }
-    else if (operationType == 'MULTIPLY' || 'MULTIPLICAR'){
+    else if (operationType == 'MULTIPLY' || operationType == 'MULTIPLICAR'){
         result = value1*value2
     }
-    else if (operationType == 'DIVIDE' || 'DIVIDIR'){
+    else if (operationType == 'DIVIDE' || operationType ==  'DIVIDIR'){
         result = value1/value2
     }
     else{
@@ -39,4 +39,9 @@ const calculate = function(number1, number2, operation){
     }
 
     return result
+}
+
+module.exports = {
+    verifyData,
+    calculate
 }
